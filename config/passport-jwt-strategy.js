@@ -2,11 +2,11 @@ const passport=require('passport')
 const jwtStrategy=require('passport-jwt').Strategy;
 const extractJWT=require('passport-jwt').ExtractJwt;
 const users=require('../models/users');
-require('dotenv/config')
+require('dotenv').config()
 
 const opts={
     jwtFromRequest:extractJWT.fromAuthHeaderAsBearerToken(),
-    secretOrKey:'event'
+    secretOrKey:process.env.jwtSecret
 }
 passport.use(new jwtStrategy(opts,(jwtPayLoad,done)=>{
 

@@ -87,12 +87,27 @@ module.exports.addUser=async (req,res)=>{
             return res.json('200',{message:"host and participant cannot be same",status:500})
         }
         else{
-
+            const  joinedEvents=req.user.joinedEvents;
+            var alreadyParticipated=false;
+            joinedEvents.map((event)=>{
+                console.log('joined eventId',event,'given eid',event_id);
+                if(event.equals(event_id))
+                {
+                    console.log('in comparing eid with joinedEvent same ');
+                    alreadyParticipated=true;
+                }
+            })
+            if(!alreadyParticipated)
+            {
             await users.findByIdAndUpdate(user_id,{$push:{'joinedEvents':event_id}})
 
             await events.findByIdAndUpdate(event_id,{$push:{'participants':user_id}})
 
-            return res.json('200',{message:"user added successfully"})
+            return res.json('200',{message:"user added successfully",status:200})
+            }
+            else{
+                return res.json('200',{message:"Already Registered with this event.Check details in your Dashboard",status:500})
+            }
 
         }
 

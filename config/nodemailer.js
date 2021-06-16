@@ -1,13 +1,16 @@
 const mailer=require('nodemailer');
 const ejs=require('ejs')
 const path=require('path')
-require('dotenv/config')
+require('dotenv').config();
 const transporter=mailer.createTransport({
     service:'gmail',
     host:'smpt.gmail.com',
     port:587,
     secure:false,
-    auth:process.env.mailerAuth
+    auth:{
+        user:process.env.user,
+        pass:process.env.pass
+    }
 });
 
 const renderTemplate=(data,relativePath)=>{
