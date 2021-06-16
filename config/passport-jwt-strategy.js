@@ -6,7 +6,7 @@ require('dotenv/config')
 
 const opts={
     jwtFromRequest:extractJWT.fromAuthHeaderAsBearerToken(),
-    secretOrKey:process.env.jwtSecret
+    secretOrKey:'event'
 }
 passport.use(new jwtStrategy(opts,(jwtPayLoad,done)=>{
 

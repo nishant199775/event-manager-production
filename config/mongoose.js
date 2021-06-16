@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
-require('dotenv/config');
-const url=process.env.dburl
+require('dotenv').config();
+const url=`mongodb+srv://Nishant:Nishant@123@cluster0.8pcvi.mongodb.net/Event-Manager?retryWrites=true&w=majority`
 const connectionParams={
     useNewUrlParser:true,
     useCreateIndex:true,
