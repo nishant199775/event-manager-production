@@ -143,14 +143,14 @@ const Navbar1= (props) => {
               <NavLink href="/aboutUs">About Us</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/showEvent" exact={true} href="http://localhost:3000/showEvent" >Events</NavLink>
+              <NavLink to="/showEvent" exact={true} href="/showEvent" >Events</NavLink>
             </NavItem>
             
           </Nav>
           
           
             
-            <NavLink style={{margin:"1rem",color:"white",border:"0.5px solid white",borderRadius:"12px"}} to="/signup" exact={true} href="http://localhost:3000/signup" >Signup</NavLink>
+            <NavLink style={{margin:"1rem",color:"white",border:"0.5px solid white",borderRadius:"12px"}} to="/signup" exact={true} href="/signup" >Signup</NavLink>
           
         
         <NavLink style={{color:"white",border:"0.5px solid white",borderRadius:"12px"}} href="/signin" exact={true} >Login</NavLink>

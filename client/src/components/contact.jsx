@@ -1,7 +1,10 @@
 import { Jumbotron, Button, Row, Col } from 'reactstrap';
-import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Form, FormGroup, Input } from 'reactstrap';
 import React from 'react';
 const Contact = (props) => {
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+  }
     return (
         <>
        <hr className="my-2" /> 
@@ -26,7 +29,7 @@ const Contact = (props) => {
         
         <Input type="text" name="Name" id="Name" placeholder="Full Name" />
       </FormGroup>
-      <Button>Submit</Button>
+      <Button onClick={handleSubmit} style={{backgroundColor:"grey"}}>Submit</Button>
     </Form>
     </Col>
     </Row>

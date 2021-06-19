@@ -30,7 +30,7 @@ const Featured = (props) => {
         catch(err)
         {
           console.log('error',err);
-          history.push('/Unauthorized')
+          history.push('/signup')
         }
 
     }
