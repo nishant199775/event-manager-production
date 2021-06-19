@@ -49,7 +49,7 @@ import {withRouter} from 'react-router-dom'
             <CardText>{this.props.text}</CardText>
            <div style={{display:"flex",justifyContent:"space-between"}}>
            <Button id={this.props.id} onClick={this.handleKnowMore} color="success">{this.props.button1}</Button>
-          <Button style={{float:"right",marginRight:"1vw"}} id={this.props.id} onClick={this.handleRegister} color="success">{this.props.button2}</Button>
+          <Button style={{float:"right",marginLeft:"1vw"}} id={this.props.id} onClick={this.handleRegister} color="success">{this.props.button2}</Button>
            </div>
           
           

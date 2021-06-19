@@ -29,7 +29,7 @@ const Contact = (props) => {
         
         <Input type="text" name="Name" id="Name" placeholder="Full Name" />
       </FormGroup>
-      <Button onClick={handleSubmit} style={{backgroundColor:"grey"}}>Submit</Button>
+      <Button onClick={handleSubmit} style={{backgroundColor:"#31b528"}}>Submit</Button>
     </Form>
     </Col>
     </Row>

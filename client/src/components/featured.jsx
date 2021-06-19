@@ -64,8 +64,8 @@ const Featured = (props) => {
       <Card style={{backgroundColor:"rgba(12, 5, 4, 0.5)",color:"white",textAlign:"center"}}>
         <CardImg top width="100%" height="200vw" src={three.image} alt="Card image cap" />
         <CardBody>
-          <CardTitle tag="h5">{two.name}</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 ">{two.type}</CardSubtitle>
+          <CardTitle tag="h5">{three.name}</CardTitle>
+          <CardSubtitle tag="h6" className="mb-2 ">{three.type}</CardSubtitle>
           
           
         </CardBody>
