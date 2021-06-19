@@ -47,9 +47,11 @@ import {withRouter} from 'react-router-dom'
          
           {/* <CardSubtitle>{props.subtitle}</CardSubtitle> */}
             <CardText>{this.props.text}</CardText>
-           
-          <Button id={this.props.id} onClick={this.handleKnowMore} color="success">{this.props.button1}</Button>
+           <div style={{display:"flex",justifyContent:"space-between"}}>
+           <Button id={this.props.id} onClick={this.handleKnowMore} color="success">{this.props.button1}</Button>
           <Button style={{float:"right",marginRight:"1vw"}} id={this.props.id} onClick={this.handleRegister} color="success">{this.props.button2}</Button>
+           </div>
+          
           
         </CardBody>
       </Card>
