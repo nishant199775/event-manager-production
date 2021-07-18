@@ -16,7 +16,7 @@ class signup extends Component {
     {
       e.preventDefault();
       const {name,email,role,confirmPassword,password,city,gender,phone}=this.state;
-      if(name===''||email===''||role===''||confirmPassword===''||city===''||gender===''||phone==='')
+      if(name===''||email===''||role===''||confirmPassword===''||city===''||gender==='Male'||phone==='')
       {
         alert('Enter all the fields')
       }

@@ -9,7 +9,7 @@ class EventForm extends Component {
     super(props);
     this.state = { Name:'',Location:'',Date:'',
     RegFee:0,
-    Type:'',Img:'abc.com',Details:'' };
+    Type:'Learning',Img:'abc.com',Details:'' };
     this.handleChange=this.handleChange.bind(this);
     this.onSubmit=this.onSubmit.bind(this);
   }
