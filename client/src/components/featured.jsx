@@ -30,7 +30,8 @@ const Featured = (props) => {
         catch(err)
         {
           console.log('error',err);
-          history.push('/signup')
+          history.push({pathname:'/Unauthorized',state:{messsage:
+            "Server Down!Try after some time..! Problem in api calls from top events section"}});
         }
 
     }

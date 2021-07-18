@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import React, { useState,useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
   Carousel,
   CarouselItem,
@@ -11,6 +12,7 @@ import {
 
 
 const Example = (props) => {
+  const history=useHistory();
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [items, setItems] = useState([
@@ -23,6 +25,7 @@ const Example = (props) => {
   ]);
 
   useEffect(async () => {
+    try{
     const res=await Axios.get('/api/v1/events/getTopEvents');
     console.log(res.data)
     const newItems=[];
@@ -32,6 +35,12 @@ const Example = (props) => {
     })
     console.log('newItems',newItems);
     setItems(newItems);
+  }
+  catch(err){
+    console.log(err);
+    history.push({pathname:'/Unauthorized',state:{messsage:
+      "Server Down!Try after some time..! Problem in api calls from corousel section"}});
+  }
   }, [])
 
   const next = () => {
