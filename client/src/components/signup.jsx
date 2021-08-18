@@ -9,14 +9,14 @@ class signup extends Component {
     constructor(props)
     {
       super(props);
-      this.state={name:"",email:"",password:"",role:"Participant",confirmPassword:"",gender:'',phone:-1,city:""}
+      this.state={name:"",email:"",password:"",role:"Participant",confirmPassword:"",gender:'Male',phone:-1,city:""}
       this.handleSubmit=this.handleSubmit.bind(this);
     }
     handleSubmit=async (e)=>
     {
       e.preventDefault();
       const {name,email,role,confirmPassword,password,city,gender,phone}=this.state;
-      if(name===''||email===''||role===''||confirmPassword===''||city===''||gender==='Male'||phone==='')
+      if(name===''||email===''||role===''||confirmPassword===''||city===''||gender===''||phone==='')
       {
         alert('Enter all the fields')
       }
